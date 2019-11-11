@@ -9,7 +9,11 @@ def rotn(n,t):
     * n --> Direction around which rotation will happen
     * t --> Theta angle of rotation
     '''
-
+    
+    '''
+    Correção do problema: o vetor n precisa ser unitário, para isto, calculamos a norma do mesmo, e dividimos
+    cada componente por esse valor
+    '''
     nx, ny, nz = n
     norm = np.sqrt(nx**2 + ny**2 + nz**2)
     nx = nx/norm
